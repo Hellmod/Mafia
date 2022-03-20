@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class PlayerListViewModel @Inject constructor() : ViewModel() {
-    val list = listOf(
+    val list = mutableListOf(
         Player(id = 0, name = "Rafał1"),
         Player(id = 1, name = "Rafał2"),
         Player(id = 2, name = "Rafał3"),
@@ -25,8 +25,28 @@ class PlayerListViewModel @Inject constructor() : ViewModel() {
         Player(id = 13, name = "Marzenka14")
     )
     val playerList = mutableStateOf<List<Player>>(list)
+    val player = mutableStateOf(Player())
 
     fun onPlayerClick(onClickPlayer: Player) {
         playerList.value = playerList.value.filter { it.id != onClickPlayer.id }
     }
+
+    fun onNameChange(value: String) {
+        player.value = player.value.copy(
+            name = value
+        )
+    }
+
+    fun onAddPlayerClick() {
+        playerList.value.map { it.id }.maxOrNull()
+
+        val maxId = playerList.value.map { it.id }.maxOrNull() ?: -2
+        val newList: MutableList<Player> = mutableListOf()
+        playerList.value.forEach { player ->
+            newList.add(player)
+        }
+        newList.add(player.value.copy(id = maxId + 1))
+        playerList.value = newList
+    }
+
 }

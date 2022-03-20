@@ -41,7 +41,7 @@ fun PlayerInfoView(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = item.name,
+            text = "${item.id}. ${item.name}",
             modifier = Modifier.padding(
                 horizontal = dimensionResource(id = R.dimen.padding_large),
                 vertical = dimensionResource(id = R.dimen.padding_large)

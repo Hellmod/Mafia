@@ -1,6 +1,6 @@
 package pl.rafalmiskiewicz.mafia.data.model
 
 data class Player(
-    val id: Int,
-    val name: String
+    val id: Int = -1,
+    val name: String = ""
 )

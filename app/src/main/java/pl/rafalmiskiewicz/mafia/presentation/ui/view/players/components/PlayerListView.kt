@@ -1,4 +1,4 @@
-package pl.rafalmiskiewicz.mafia.presentation.ui.view.players
+package pl.rafalmiskiewicz.mafia.presentation.ui.view.players.components
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -15,16 +15,16 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.tooling.preview.Preview
 import pl.rafalmiskiewicz.mafia.R
 import pl.rafalmiskiewicz.mafia.data.model.Player
-import pl.rafalmiskiewicz.mafia.presentation.ui.view.players.components.PlayerInfoView
 
 @Composable
 fun PlayerListView(
+    modifier: Modifier= Modifier,
     lazyListState: LazyListState = rememberLazyListState(),
     playerList: List<Player>,
     onEventItemClick: (Player) -> Unit
 ) {
     LazyColumn(
-        modifier = Modifier.fillMaxSize(),
+        modifier = modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         state = lazyListState
     ) {
