@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="empty">0dp</dimen>
+
+    <!--PADDING SIZE-->
+    <dimen name="padding_smaller">4dp</dimen>
+    <dimen name="padding_small">6dp</dimen>
+    <dimen name="padding_default">8dp</dimen>
+    <dimen name="padding_medium">12dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_xLarge">24dp</dimen>
+    <dimen name="padding_xxLarge">32dp</dimen>
+    <dimen name="padding_xxxLarge">38dp</dimen>
+
+    <dimen name="standard_radius">14dp</dimen>
+
+    <dimen name="column_calendar_width">36dp</dimen>
+
+    <dimen name="default_shadow_elevation">4dp</dimen>
+    <dimen name="border_small">2dp</dimen>
+    <dimen name="border">4dp</dimen>
+    <dimen name="shadow_blur_radius">14dp</dimen>
+
+    <dimen name="elevation">4dp</dimen>
+
+    <dimen name="icon_size">14dp</dimen>
+    <dimen name="icon_size_default">40dp</dimen>
+    <dimen name="icon_size_large">80dp</dimen>
+    <dimen name="icon_size_xxxLarge">128dp</dimen>
+
+    <dimen name="spacer_mini">2dp</dimen>
+    <dimen name="spacer_small">4dp</dimen>
+    <dimen name="space_large">14dp</dimen>
+    <dimen name="space_xLarge">24dp</dimen>
+    <dimen name="space_xxLarge">48dp</dimen>
+    <dimen name="space_xxxLarge">96dp</dimen>
+
+</resources>
