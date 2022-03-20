@@ -49,4 +49,8 @@ class PlayerListViewModel @Inject constructor() : ViewModel() {
         playerList.value = newList
     }
 
+    fun onNextClick(){
+
+    }
+
 }

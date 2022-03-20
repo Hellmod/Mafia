@@ -1,8 +1,10 @@
 package pl.rafalmiskiewicz.mafia.presentation.ui.view.players
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
@@ -20,14 +22,18 @@ fun PlayerListScreenView(
         color = MaterialTheme.colors.background
     ) {
         Column() {
-
-            InsertPlayerView(
-                modifier = Modifier.height(50.dp),
-                player = viewModel.player.value,
-                onNameChange = viewModel::onNameChange,
-                onAddPlayerClick = viewModel::onAddPlayerClick
-            )
+            Row(Modifier.height(50.dp)) {
+                InsertPlayerView(
+                    player = viewModel.player.value,
+                    onNameChange = viewModel::onNameChange,
+                    onAddPlayerClick = viewModel::onAddPlayerClick
+                )
+                Button(onClick = viewModel::onNextClick) {
+                    Text(text = "Dalej")
+                }
+            }
             Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.padding_smaller)))
+
             PlayerListView(
                 modifier = Modifier.height(650.dp),
                 playerList = viewModel.playerList.value,
