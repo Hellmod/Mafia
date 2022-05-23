@@ -9,12 +9,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.unit.dp
+import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import pl.rafalmiskiewicz.mafia.R
 import pl.rafalmiskiewicz.mafia.presentation.ui.view.players.components.InsertPlayerView
 import pl.rafalmiskiewicz.mafia.presentation.ui.view.players.components.PlayerListView
 
+@Destination(start = true)
 @Composable
 fun PlayerListScreenView(
+    navigator: NavGraph,
     viewModel: PlayerListViewModel,
 ) {
     Surface(
