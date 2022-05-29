@@ -9,13 +9,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import pl.rafalmiskiewicz.mafia.R
+import pl.rafalmiskiewicz.mafia.presentation.ui.nav.Screen
 import pl.rafalmiskiewicz.mafia.presentation.ui.view.players.components.InsertPlayerView
 import pl.rafalmiskiewicz.mafia.presentation.ui.view.players.components.PlayerListView
 
 @Composable
 fun PlayerListScreenView(
     viewModel: PlayerListViewModel,
+    navController: NavController
 ) {
     Surface(
         modifier = Modifier.fillMaxSize(),
@@ -28,7 +31,9 @@ fun PlayerListScreenView(
                     onNameChange = viewModel::onNameChange,
                     onAddPlayerClick = viewModel::onAddPlayerClick
                 )
-                Button(onClick = viewModel::onNextClick) {
+                Button(
+                    onClick = { navController.navigate(Screen.SecondScreen.route) }//viewModel::onNextClick
+                ) {
                     Text(text = "Dalej")
                 }
             }
